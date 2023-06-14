@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="Book.js"></script>
+    <style>
+        body{
+            margin: 10px 20px;
+        }
+        .search-form{
+            display: flex;
+            flex-direction: column;
+        }
+        /* .result-filter{
+            display: none;
+        }
+        .book-tablefilter .show{
+            display: block;
+        } */
+    </style>
+  </head>
+  <body class="container">
+    <form id="book-form">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          placeholder="Enter title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input
+          type="text"
+          class="form-control"
+          id="author"
+          placeholder="Enter Author"
+        />
+      </div>
+      <div class="form-group">
+        <label for="publishyear">Publish year</label>
+        <input
+          type="text"
+          class="form-control"
+          id="year"
+          placeholder="Enter publish Year"
+        />
+      </div>
+      <div class="form-group">
+        <label for="npage">Number of page</label>
+        <input type="text" class="form-control" id="nofpage" placeholder="Pages" />
+      </div>
+      <button type="submit" id="submit" class="btn btn-primary">Add</button>
+    </form>
+    <form action="" id="search-form">
+      <table id="book-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publish year</th>
+            <th>Number of page</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="result"></div>
+      <div id="searchForm" class="search-form">
+          <form action="">
+              <div class="form-group">
+                  <label for="npage" >Search</label>
+                  <input type="text" class="form-control w-50" id="search" placeholder="" />
+                </div>
+                <button type="submit" id="search" class="btn btn-primary w-25">Search</button>
+          </form>
+
+      </div>
+      <div class="result-filter">
+          <table id="book-tablefilter" class="book-tablefilter">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Publish year</th>
+                  <th>Number of page</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+      </div>
+    </form>
+    
+  </body>
+</html>
