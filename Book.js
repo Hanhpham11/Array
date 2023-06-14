@@ -69,10 +69,17 @@ function countBook() {
   
 window.onload = function () {
     $("book-form").onsubmit = function (e) {
-        validate();
+        
         e.preventDefault();
-
         var { title, author, year, pages } = getInfor();
+        if (title == ""|| author==""|| year==""||pages=="") {
+            alert("this fill must be filled out");
+            return false;
+        }
+        else if (isNaN(year) || isNaN(pages)) {
+            alert("this fill must be a number");
+            return false;
+        }
         var book = new Book(title, author, year, pages);
         books.push(book);
         var tbody = $("book-table").getElementsByTagName("tbody")[0];
